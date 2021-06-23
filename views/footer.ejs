@@ -1,0 +1,34 @@
+</div>
+</section>
+</div>
+
+<footer>
+<div id="footer_by">Dibuat Oleh Vincentius Ronalto</div>
+
+</footer>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>Apakah anda yakin untuk menghapus kontak?</p>
+
+      <form action="/hapus-kontak" method="POST">
+        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+        <input type="hidden" id="remove_delete_noinduk" name="remove_delete_noinduk">
+        <input type="submit" id="konfirmasi_hapus" value="Konfirmasi Hapus">
+      </form>
+      
+      <div id="konfirmasi_batalkan">
+            Batalkan
+      </div>
+    </div>
+  
+  </div>
+  
+
+<script src="./js/main.js"></script>
+</body>
+</html>

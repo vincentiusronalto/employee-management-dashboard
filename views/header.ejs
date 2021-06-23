@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <title>Document</title>
+</head>
+<body>
+    
+        <header>
+            <img src="/img/logo.png" id="logo">
+            <h1>Aplikasi Manajemen Karyawan</h1>
+        </header>
+
+
+
+        <div id="content_wrapper">
+            <!-- untuk menambah kontak karyawan -->
+            <section id="tambah_karyawan">
+                <div id="tambah_edit_inside">
+                    
+
+                    <form action="/submit_karyawan" id="form_tambah_edit_karyawan" method="POST">
+                        <input type="text" class="input_tambah" name="input_no_induk" id="input_no_induk" placeholder="no-induk" required>
+                        <input type="text" class="input_tambah" name="input_nama" id="input_nama" placeholder="nama" required>
+                        <input type="text" class="input_tambah" name="input_alamat" id="input_alamat" placeholder="alamat" required>
+                          
+                        <div>
+                            <label for="">tanggal-lahir</label>
+                            <input type="date" class="input_tambah" name="input_tanggal_lahir" id="input_tanggal_lahir"  value="" required>
+                        </div>
+
+                        <div>
+                            <label for="">tanggal-bergabung</label>
+                            <input type="date" class="input_tambah" name="input_tanggal_bergabung" id="input_tanggal_bergabung" value="" required>
+                        </div>
+
+                        <input type="hidden" id="csrf" name="_csrf" value="<%= csrfToken %>">
+                        <input type="hidden" name="fixed_noinduk" id="fixed_noinduk" value="">
+                        <input type="hidden" name="create_or_edit" id="create_or_edit" value="create">
+
+                        <input id="btn_submit" type="submit" value="Tambah">
+
+                        <div id="btn_clear">
+                            <div>
+                                Batalkan
+                            </div>
+                            
+                        </div>
+                    </form>
+                
+                    
+               
+                </div>
+            </section>
+            <section id="tampilan_karyawan">
+                <div>
+                
+                <div id="filter">
+                    
+
+                    <!-- Cari Karyawan -->
+                    <!-- <div> -->
+                        <input id="cari_karyawan" type="text" placeholder="cari karyawan..." class="input_tambah">
+                    <!-- </div> -->
+
+                    <!-- filter data -->
+                    <select name="cuti" id="cuti">
+                        <option value="home"><span>[1]</span> Semua Karyawan</option>
+                        <option value="tiga-karyawan-pertama"><span>[2]</span> 3 Karyawan Pertama</option>
+                        <option value="pernah-cuti"><span>[3]</span>Pernah Cuti</option>
+                        <option value="cuti-lebih-dari-sekali"><span>[4]</span>Cuti lebih dari sekali</option>
+                    </select>
+                </div>

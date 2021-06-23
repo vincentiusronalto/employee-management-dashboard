@@ -1,0 +1,70 @@
+<%- include ('header'); -%>
+<!-- 
+[
+{
+"nama": "Amin",
+"no_induk": "IP06002",
+"alamat": "Jln Imam Bonjol no 11, Mojokerto",
+"tanggal_lahir2": "03-SEP-1977",
+"tanggal_bergabung2": "07-AUG-2005",
+"total_cuti": "0",
+"sisa_cuti": "12"
+},
+{
+"nama": "Agus",
+"no_induk": "IP06001",
+"alamat": "Jln Gaja Mada no 12, Surabaya",
+"tanggal_lahir2": "11-JAN-1980",
+"tanggal_bergabung2": "07-AUG-2005",
+"total_cuti": "4",
+"sisa_cuti": "8"
+},
+{
+"nama": "Yusuf",
+"no_induk": "IP06003",
+"alamat": "Jln A Yani Raya 15 No 14 Malang",
+"tanggal_lahir2": "09-AUG-1973",
+"tanggal_bergabung2": "07-AUG-2006",
+"total_cuti": "2",
+"sisa_cuti": "10"
+}
+]
+-->
+
+<section>
+    <table>
+        <tr>
+            <th>No</th>
+            <th>Nomor Induk</th>
+            <th>Nama</th>
+            <th>Alamat</th>
+            <th>Tempat tanggal lahir</th>
+            <th>Bergabung</th>
+            <th>Total Cuti</th>
+            <th>Sisa Cuti</th>
+            <th>Edit</th>
+            <th>Remove</th>
+        </tr>
+        
+    
+
+        <% for(let i=0; i < locals.karyawan.length; i++){ %>
+            <tr>
+            <td><%= i+1 %></td>
+            <td><%= locals.karyawan[i].no_induk %></td>
+            <td><%= locals.karyawan[i].nama %></td>
+            <td><%= locals.karyawan[i].alamat %></td>
+            <td><%= locals.karyawan[i].tanggal_lahir2 %></td>
+            <td><%= locals.karyawan[i].tanggal_bergabung2 %></td>
+            <td><%= locals.karyawan[i].total_cuti %></td>
+            <td><%= locals.karyawan[i].sisa_cuti %></td>
+            <td class="center-icons"><span class="material-icons icons-edit">edit</span></td>
+            <td class="center-icons"><span class="material-icons icons-delete">delete</span></td>
+            </tr>
+        <% } %>
+
+    </table>
+    
+</section>
+
+<%- include ('footer'); -%>

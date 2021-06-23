@@ -1,0 +1,45 @@
+<%- include ('header'); -%>
+                
+                <section>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th>No</th>
+                                <th>Nomor Induk</th>
+                                <th>Nama</th>
+                                <th>Alamat</th>
+                                <th>Tempat tanggal lahir</th>
+                                <th>Bergabung</th>
+                                <th>Hari Cuti</th>
+                                <th>Sisa Cuti</th>
+                                <th>Edit</th>
+                                <th>Remove</th>
+                            </tr>
+                        </tbody>
+                        
+                        <tbody id="content_search">
+                        <% for(let i=0; i < locals.karyawan.length; i++){ %>
+                            <tr>
+                            <td><%= i+1 %></td>
+                            <td><%= locals.karyawan[i].no_induk %></td>
+                            <td><%= locals.karyawan[i].nama %></td>
+                            <td><%= locals.karyawan[i].alamat %></td>
+                            <td><%= locals.karyawan[i].tanggal_lahir %></td>
+                            <td><%= locals.karyawan[i].tanggal_bergabung %></td>
+                            <td><%= locals.karyawan[i].total_cuti %></td>
+                            <td><%= locals.karyawan[i].sisa_cuti %></td>
+                            <td class="center-icons"><span class="material-icons icons-edit" data-noinduk="<%= locals.karyawan[i].no_induk %>">edit</span></td>
+                            <td class="center-icons"><span class="material-icons icons-delete" data-noinduk="<%= locals.karyawan[i].no_induk %>">delete</span></td>
+                            </tr>
+                        <% } %>
+                        </tbody>
+                        
+                        
+                            
+
+                    </table>
+                    
+                </section>
+<%- include ('footer'); -%>
+        
+                

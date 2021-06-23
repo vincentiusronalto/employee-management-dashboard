@@ -1,0 +1,357 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    
+}
+h1{
+    font-weight: 100;
+    font-size: 24px;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Raleway';
+    
+}
+
+header{
+    /* background: #dfe6e9; */
+    border-bottom: 1px solid #dfe6e9;
+    padding: 10px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header h1{
+    margin-left: auto;
+}
+
+#logo{
+    display: block;
+    height: 50px;
+}
+
+input, section{
+    display: block;
+}
+
+.input_tambah{
+    padding: 5px 10px;
+    border-radius: 0px;
+    outline: none;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    margin-right: 10px;
+    
+    
+}
+
+label{
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+}
+
+#content_wrapper{
+    display: flex;
+    /* background: red; */
+    /* width: 100%; */
+    flex-grow: 1;
+    flex-direction: column;
+    /* margin-left: 50px; */
+    /* margin-top: 30px; */
+
+    margin: 30px 50px;
+}
+
+/* #content_wrapper section{
+    display: flex;
+    
+    
+} */
+
+#tambah_karyawan{
+    /* margin: 0 auto; */
+    width: 100%;
+    margin-bottom: 20px;
+    /* background: #81ecec; */
+    background: #dfe6e9;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+#tambah_edit_inside{
+
+}
+
+.title_kontak{
+    text-align: center;
+}
+
+#form_tambah_edit_karyawan
+{
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    
+}
+
+
+footer{
+    border-top: 1px solid #dfe6e9;
+    padding: 1rem;
+    text-align: right;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+#btn_submit{
+    padding: 10px;
+    background: #00b894;
+    text-align: center;
+    min-width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 20px;
+    color: white;
+}
+
+#btn_submit:hover{
+    background: #009376;
+}
+
+#btn_clear{
+    padding: 10px;
+    
+    background: #fc5c65;
+    text-align: center;
+    min-width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 20px;
+    color: white;
+}
+
+#btn_clear:hover{
+    
+    background: #fb1825;
+}
+
+table {
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: "Raleway";
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #ddd;
+    
+  }
+  
+  table td, table th {
+    /* border: 1px solid #ddd; */
+    /* border-bottom: none; */
+    padding: 8px;
+    font-size: 16px;
+    text-align: center;
+
+    
+
+    
+  }
+  
+  /* table tr:nth-child(even){background-color: #f2f2f2;} */
+  table tr:nth-child(even){background-color: #f1f2f6;}
+  
+  table tr:hover {background-color: #ddd;}
+  
+  table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    
+    
+    background: white;
+    /* background: #d2dae2; */
+    /* color: white; */
+  }
+
+  table td.center-icons{
+      text-align: center;
+  }
+
+#filter{
+    display: flex;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+
+#cari_karyawan{
+    margin-left: auto;
+    /* min-width: 200px; */
+}
+
+#tampilan_karyawan{
+    width: 100%;
+}
+
+.icons-edit{
+    color: #5352ed;
+    cursor: pointer;
+    transition: all 0.2s;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.icons-edit:hover{
+    background: #5352ed;
+    color: white;
+}
+
+.icons-delete{
+    color: #ff6b81;
+    cursor: pointer;
+    transition: all 0.2s;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.icons-delete:hover{
+    background: #ff6b81;
+    color: white;
+}
+
+#cuti{
+    cursor: pointer;
+}
+
+#tambah_karyawan.editing_mode{
+    background: #ffeaa7 ;
+    padding: 5px;
+}
+
+input{
+    font-size: 20px;
+}
+
+#input_tanggal_lahir, #input_tanggal_bergabung{
+    font-family: 'Raleway';
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+
+  /* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 350px;
+    text-align: center;
+  }
+
+  /* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  #konfirmasi_hapus{
+    background: #fc5c65;
+    color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    border: none;
+  }
+
+  #konfirmasi_hapus:hover{
+    background: #ff6b81;
+    color: white;
+}
+
+  #konfirmasi_batalkan{
+    background: white;
+    padding: 10px;
+    border: 1px solid gray;
+    cursor: pointer;
+  }
+
+  #konfirmasi_batalkan:hover{
+      background: gray;
+      color: white;
+  }
+
+  .note_cuti{
+      background: #ffeaa7 !important;
+  }
+
+  .td_white{
+      background: white;
+  }
+
+  .tr_separator td{
+      padding-bottom: 20px;
+      background: white;
+  }
+
+  @media only screen and (max-width: 1200px) {
+    #form_tambah_edit_karyawan {
+      flex-direction: column;
+    }
+
+    h1{
+        display: none;
+    }
+
+    header{
+        border-bottom: none;
+    }
+
+    footer{
+        border-top: none;
+    }
+    
+  }
+
+  
+
+
+  

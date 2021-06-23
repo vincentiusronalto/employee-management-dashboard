@@ -1,0 +1,109 @@
+<!-- 
+[
+{
+"nama": "Yusuf",
+"no_induk": "IP06003",
+"cuti_berapa_kali": "1",
+"data_cuti": [
+{
+"tanggal_cuti2": "30-AUG-2020",
+"keterangan": "Acara Keluarga"
+}
+]
+},
+{
+"nama": "Alyssa",
+"no_induk": "IP06004",
+"cuti_berapa_kali": "1",
+"data_cuti": [
+{
+"tanggal_cuti2": "29-AUG-2020",
+"keterangan": "Menikah"
+}
+]
+},
+{
+"nama": "Agfika",
+"no_induk": "IP06006",
+"cuti_berapa_kali": "1",
+"data_cuti": [
+{
+"tanggal_cuti2": "19-AUG-2020",
+"keterangan": "Nenek Sakit"
+}
+]
+},
+{
+"nama": "James",
+"no_induk": "IP06007",
+"cuti_berapa_kali": "1",
+"data_cuti": [
+{
+"tanggal_cuti2": "23-AUG-2020",
+"keterangan": "Sakit"
+}
+]
+},
+{
+"nama": "Agus",
+"no_induk": "IP06001",
+"cuti_berapa_kali": "2",
+"data_cuti": [
+{
+"tanggal_cuti2": "02-AUG-2020",
+"keterangan": "Acara Keluarga"
+},
+{
+"tanggal_cuti2": "18-AUG-2020",
+"keterangan": "Anak Sakit"
+}
+]
+}
+]
+ -->
+ <%- include ('header'); -%>
+<section>
+    <table>
+        <tr>
+            <th>No</th>
+            <th>Nomor Induk</th>
+            <th>Nama</th>
+            <th>Cuti Berapa Kali</th>
+        </tr>
+        
+    
+
+        <% for(let i=0; i < locals.karyawan.length; i++){ %>
+            
+            <tr>
+            <td class="td_white"><%= i+1 %></td>
+            <td class="td_white"><%= locals.karyawan[i].no_induk %></td>
+            <td class="td_white"><%= locals.karyawan[i].nama %></td>
+            <td class="td_white"><%= locals.karyawan[i].cuti_berapa_kali %></td>
+            </tr>
+
+            
+                <!-- <th colspan="2">Tanggal</th> -->
+                <!-- <th colspan="2">Keterangan</th> -->
+                <% for(let j=0; j < locals.karyawan[i].data_cuti.length; j++){ %>
+                <tr class="note_cuti">
+                <td></td>
+                <td></td>
+                <td colspan="1"><%= locals.karyawan[i].data_cuti[j].tanggal_cuti2  %></td>
+                <td colspan="1"><%= locals.karyawan[i].data_cuti[j].keterangan %></td>
+                </tr>
+                <% } %>
+            
+            <tr class="tr_separator">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        <% } %>
+        
+
+    </table>
+    
+</section>
+<%- include ('footer'); -%>
