@@ -8,6 +8,8 @@ https://nodejs.org/en/
 2. Install Postgresql
 https://www.datacamp.com/community/tutorials/installing-postgresql-windows-macosx
 
+3. Create .env file and map your postgresql config
+
 3. Install and run the app via Nodemon https://www.npmjs.com/package/nodemon
 
 ### create database tabel and feed the data
