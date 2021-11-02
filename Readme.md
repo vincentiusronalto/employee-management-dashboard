@@ -8,9 +8,7 @@ https://nodejs.org/en/
 2. Install Postgresql
 https://www.datacamp.com/community/tutorials/installing-postgresql-windows-macosx
 
-3. Install Nodemon
-
-4 nodemon run .
+3. Install and run the app via Nodemon https://www.npmjs.com/package/nodemon
 
 ### create database tabel and feed the data
 1. copy the insert table command from sql file
