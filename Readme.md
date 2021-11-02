@@ -20,5 +20,3 @@ untuk  database :
 terdapat 2 tabel : karyawan dan cuti
 
 schema nya dapat dilihat di karyawan.sql dan cuti.sql
-
-lalu data yang diinsert dari soal yang diberikan
