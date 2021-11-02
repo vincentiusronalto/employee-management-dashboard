@@ -1,22 +1,12 @@
-Freelance Project for a company
+### EMPLOYEE MANAGEMENT DASHBOARD
 
-Untuk start local 
+How to run locally
 
-butuh install server node js dan database postgresql 
+1. Install node js & npm
+https://nodejs.org/en/
 
-untuk server :
-install node js di computer
+2. Install Postgresql
+https://www.datacamp.com/community/tutorials/installing-postgresql-windows-macosx
 
-npm install 
-
-npm install -g nodemon
-
-nodemon .
-
--------
-
-untuk  database :
-
-terdapat 2 tabel : karyawan dan cuti
-
-schema nya dapat dilihat di karyawan.sql dan cuti.sql
+### create database tabel and feed the data
+take the schema from database folder
